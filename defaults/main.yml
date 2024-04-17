@@ -1,0 +1,7 @@
+---
+success_alert: false
+failure_alert: false
+
+# Telegram Bot Credentials
+telegram_chat_id: ""
+telegram_token: ""

@@ -1,0 +1,19 @@
+---
+- name: Telegram Alerts
+  block:
+    - name: Telegram Alerts | Send Success Alert
+      ansible.builtin.import_tasks: alerts/success_alert.yml
+      when:
+        - success_alert is defined
+        - success_alert == true
+
+    - name: Telegram Alerts | Send Failure Alert
+      ansible.builtin.import_tasks: alerts/failure_alert.yml
+      when:
+        - failure_alert is defined
+        - failure_alert == true
+
+  rescue:
+    - name: Telegram Alerts | Rescue
+      ansible.builtin.set_fact:
+        task_failed: true

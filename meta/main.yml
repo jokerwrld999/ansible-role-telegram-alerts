@@ -1,0 +1,36 @@
+---
+dependencies: []
+
+galaxy_info:
+  role_name: alerts
+  author: jokerwrld999
+  description: Send Telegram Alerts.
+  license: "license (BSD, MIT)"
+  min_ansible_version: "2.10"
+  platforms:
+    - name: ArchLinux
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - buster
+        - bullseye
+        - bookworm
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+        - jammy
+    - name: Rocky
+      version:
+        - all
+    - name: ArchLinux
+      versions:
+        - all
+  galaxy_tags:
+    - telegram
+    - notification
+    - alert

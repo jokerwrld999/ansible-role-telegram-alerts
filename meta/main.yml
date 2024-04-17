@@ -2,7 +2,7 @@
 dependencies: []
 
 galaxy_info:
-  role_name: alerts
+  role_name: telegram-alerts
   author: jokerwrld999
   description: Send Telegram Alerts.
   license: "license (BSD, MIT)"

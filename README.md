@@ -17,14 +17,12 @@ Available variables are listed below, along with default values:
 
 **Alerts:**
 
-- `success_alert`: Boolean, defaults to `false`. Set to `true` to send success
-  alert.
-
-- `failure_alert`: Boolean, defaults to `false`. Set to `true` to send failure
-  alert.
+- `task_failed`: Boolean, defaults to `false`. Set to `true` to send failure
+  alert otherwise send success alert.
 
 - `telegram_chat_id`: String, empty by default. Set your Telegram chat ID if
   using Telegram alerts.
+
 - `telegram_token`: String, empty by default. Set your Telegram bot token if
   using Telegram alerts.
 
@@ -38,8 +36,7 @@ Consider using Ansible Vault or other secure credential management solutions.
     - jokerwrld999.telegram-alerts
 
   vars:
-    success_alert: true
-    failure_alert: true
+    task_failed: true
     telegram_chat_id: "your_chat_id"
     telegram_token: "your_bot_token"
 ```

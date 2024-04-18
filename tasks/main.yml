@@ -5,7 +5,6 @@
       ansible.builtin.import_tasks: alerts/success_alert.yml
       when:
         - task_failed is not defined
-        - task_failed == false
 
     - name: Telegram Alerts | Send Failure Alert
       ansible.builtin.import_tasks: alerts/failure_alert.yml

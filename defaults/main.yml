@@ -1,4 +1,4 @@
 ---
 # Telegram Bot Credentials
-telegram_chat_id: ""
-telegram_token: ""
+telegram_chat_id: "{{ lookup('env', 'TELEGRAM_CHAT_ID') | default('', true) }}"
+telegram_token: "{{ lookup('env', 'TELEGRAM_TOKEN') | default('', true) }}"

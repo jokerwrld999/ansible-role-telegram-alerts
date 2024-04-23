@@ -1,0 +1,29 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+  pre_tasks:
+    # - name: Update apt cache.
+    #   apt: update_cache=true cache_valid_time=600
+    #   when: ansible_os_family == "Debian"
+
+    # - name: Install test dependencies (RedHat).
+    #   package: name=which state=present
+    #   when: ansible_os_family == "RedHat"
+
+  roles:
+    - role: jokerwrld999.telegram-alerts
+
+  tasks:
+    - name: Failed Task Output
+      ansible.builtin.debug:
+        msg:
+          - "⚠️  Ansible provision failed!"
+          - "Task:  {{ ansible_failed_task.name }}"
+          - "Action: {{ ansible_failed_task.action }}"
+          - "Error Message:"
+          - "{{ ansible_failed_result }}"
+      failed_when: true
+      when:
+        - task_failed is defined
+        - task_failed == true

@@ -11,24 +11,17 @@ galaxy_info:
     - name: ArchLinux
       versions:
         - all
+    - name: Debian
+      versions:
+        - all
     - name: Fedora
       versions:
         - all
-    - name: Debian
-      versions:
-        - buster
-        - bullseye
-        - bookworm
     - name: Ubuntu
       versions:
-        - bionic
-        - focal
-        - jammy
+        - all
     - name: Rocky
       version:
-        - all
-    - name: ArchLinux
-      versions:
         - all
   galaxy_tags:
     - telegram

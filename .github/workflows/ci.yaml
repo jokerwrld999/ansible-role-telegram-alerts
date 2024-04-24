@@ -49,3 +49,5 @@ jobs:
           ANSIBLE_FORCE_COLOR: "1"
           MOLECULE_DISTRO: ${{ matrix.distro }}
           MOLECULE_PLAYBOOK: ${{ matrix.playbook }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
